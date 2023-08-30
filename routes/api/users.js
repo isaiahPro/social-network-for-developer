@@ -70,10 +70,6 @@ const gravatar = require("gravatar");
         res.status(500).send("server error")
     }
 }
-
-
-
-  
-    );
+ );
   
  module.exports=router; 
