@@ -1,0 +1,75 @@
+.navbarmain{
+    background-color:rgb(18, 39, 39);
+    height: 6vh;
+    border-bottom:solid;
+    border-bottom-color:rgb(33, 223, 223);
+    font-size: 300%;
+    color: white;
+    text-align: left;
+    padding-left: 3%;
+    padding-top:20px;
+    padding-right: 50px;
+    border-width: 3px;
+    display: fixed;
+    width: 97vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+}
+#the-logo-text{
+    font-weight: bold;
+}
+
+.nav-dev-in-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10%;
+    font-size: 70%;
+    margin-right: 7%;
+}
+
+
+.nav-bar-link{
+    text-decoration: none;
+    color: white;
+    padding:10px;
+}
+.nav-bar-link-home{
+    text-decoration: none;
+    color: white;
+    padding:10px;
+
+}
+.nav-bar-link:focus{
+    outline:none  ;
+    background-color:rgb(46, 69, 69);
+    
+}
+.nav-bar-link:hover{
+    outline:none ;
+    background-color:rgb(46, 69, 69);
+}
+
+@media screen and (max-width: 480px) {
+    .navbarmain{
+        font-size: 100%;
+        border-width: 2px;
+        height: 5vh;
+    
+    }
+    .nav-bar-link{
+        text-decoration: none;
+        color: white;
+        padding:4px;
+    }
+    .nav-dev-in-row{
+        gap: 2%;
+        font-size: 70%;
+        margin-right: 3%;
+    }
+   
+    
+    /* CSS rules for screens with a maximum width of 480px */
+  }

@@ -1,0 +1,106 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
+
+
+.home-main-container{
+    font-family: 'Abyssinica SIL', serif;
+    text-align: center;
+    min-width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+    color: white;
+    background-color: rgba(9, 8, 8, 0.5);
+    font-size: large;
+    padding-top: 17%;
+}
+.home-main-container>span{
+    font-size: 100px;
+}
+.home-main-container>p{
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+
+}
+#home-signup-button{
+    background:#34b6eb ;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 22px;
+    color: white;
+    border: none;
+    text-decoration: none;
+    font-family: 'Abyssinica SIL', serif;
+}
+#home-signup-button:hover{
+    background:#568fa6 ;
+    
+}
+#home-login-button{
+    
+    background:#fcfeff ;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 22px;
+    color:black;
+    border: none;
+    text-decoration: none;
+    margin-left: 40px;
+
+}
+#home-login-button:hover{
+    background:#b9b9b9 ;
+}
+
+
+@media screen and (max-width: 480px) {
+  
+    .home-main-container{
+        padding-top: 50%;
+    }
+    .home-main-container>span{
+        font-size: 30px;
+  
+    }
+    .home-main-container>p{
+        font-size: 12px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding-left: 5%;
+        padding-right: 10px;
+    
+    }
+    #home-login-button{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        border-radius: 10px;
+        font-size: 15px;
+
+    
+    }
+    #home-signup-button{
+        background:#34b6eb ;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        border-radius: 10px;
+        font-size: 15px
+       
+    }
+    
+    /* CSS rules for screens with a maximum width of 480px */
+  }
+  
