@@ -5,6 +5,7 @@ import Login from "./Login"
 import Navbar from "./navbar"
 import Register from "./Home"
 import SignUp from "./Signup"
+import Profile from "./Profile"
 
 
 export {
@@ -14,5 +15,6 @@ export {
     Login,
     Register,
     SignUp,
+    Profile
 
 };

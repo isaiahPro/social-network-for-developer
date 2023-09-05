@@ -3,10 +3,12 @@
  const bcrypt = require("bcryptjs")
  const jwt = require("jsonwebtoken");
  const config = require("config");
+ const Profile = require("../../model/profile")
  const { check, validationResult } = require('express-validator');
 
  const User = require("../../model/user");
 const gravatar = require("gravatar");
+const user = require("../../model/user");
 
  router.post("/",[
     check("name","Name is required").not().isEmpty(),
@@ -71,5 +73,43 @@ const gravatar = require("gravatar");
     }
 }
  );
+
+ router.get("/", async (req,res)=>{
+    try {
+        const data = await user.find().select("-password");
+        return   res.json(data);
+        
+       } catch (error) {
+        res.status(500).json({ message: 'Error retrieving data', error: error.message });
+                      }
+    
+ })
+
+ router.get("/cover", async (req,res)=>{
+  try {
+      const data = await Profile.find().populate("user").select("-password");
+      return   res.json(data);
+      
+     } catch (error) {
+      res.status(500).json({ message: 'Error retrieving data', error: error.message });
+                    }
   
+})
+router.get('/:user_id', async (req, res) => {
+    const userId = req.params.user_id;
+
+    try {
+      const user = await User.findById(userId).select("-password");
+  
+      if (user) {
+        res.json(user);
+      } else {
+        res.status(404).json({ error: 'User not found' });
+      }
+    } catch (error) {
+      console.error('Error retrieving user:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  });
+
  module.exports=router; 

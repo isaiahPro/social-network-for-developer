@@ -72,6 +72,10 @@
     border-radius: 10px;
     font-family: 'Abyssinica SIL', serif;
 }
+.buttonview{
+    text-decoration: none;
+    color: white;
+}
 .developer-othercolorstyle{
     color: orange;
 }

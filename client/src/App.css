@@ -2,12 +2,10 @@
 
     margin: -10px;
     padding: 0px;
-    background-color: black;
-    background-image:url("./assets/main-background-pic.jpg") ;
+    
     width: 100.56vw;
     min-height: 110vh;
-    background-repeat: no-repeat;
-    background-size: cover;
+   
     overflow: hidden;
 }
 ::-webkit-scrollbar {
