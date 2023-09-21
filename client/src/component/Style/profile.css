@@ -9,6 +9,7 @@
     padding-top: 40px;
     margin: 13%;
     margin-top: 100px;
+    margin-bottom: 0px;
     text-align: center;
     color: white;
     border-radius: 30px;
@@ -16,9 +17,22 @@
     border-width: 4px;
     font-size: 40px;
 }
+.About_profile_data{
+    background-color:rgb(49, 67, 83);
+    padding: 20px;
+    margin: 13%;
+    margin-top: 0px;
+    text-align: left;
+    margin-bottom: 0px;
+    color: white;
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 4px;
+    font-size: 30px;
+}
+
 .top-profile:hover{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
     animation: rotate 2s linear infinite;
 
 
@@ -56,6 +70,22 @@
     color: white;
     gap: 10px;
 }
+.edit_profile_button{
+    z-index: 3;
+    position: absolute;
+    top: 100px;
+    right: 40px;
+    display: flex;
+    font-size: 40px;
+    position: fixed;
+    background-color: rgb(29, 29, 46);
+    border-radius: 10px;
+    border: solid;
+    border-width: 2px;
+    padding: 2px;
+    color: white;
+    animation: rotate 2s linear infinite;
+}
 .Social-media-icon-in{
     padding: 7px;
     border-radius: 50%;
@@ -83,6 +113,18 @@
         font-size: large;
         width: 80vw;
     }
+    .edit_profile_button{
+        z-index: 3;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        font-size: 15px;
+        border-radius: 10px;
+        position: fixed;
+        padding: 3px;
+        color: white;
+        animation: rotate 2s linear infinite;
+    }
     .indv-profile-pic{
         width: 100px;
         height: 100px;
@@ -90,7 +132,7 @@
     }
     .social-media-icon{
         
-        margin-left: 0px;
+        margin-left: 40px;
         margin-top: 0px;
     
     }
@@ -98,6 +140,17 @@
         color: orange;
         font-size: 30px;
         font-style:italic;
+    }
+    .About_profile_data{
+        padding: 20px;
+        padding-top: 40px;
+        margin: 0px;
+        margin-top: 0px;
+        border-radius: 0px;
+        border-width: 2px;
+        margin-left: 0px;
+        font-size: medium;
+        width: 90vw;
     }
 
 }

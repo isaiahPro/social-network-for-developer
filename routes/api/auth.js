@@ -48,7 +48,7 @@ router.post("/",[
             return res.status(400).json({message:"Invalid password  Credentials"})
          }
            // get users gravator
-    
+
     const payload = {
         user:{
             id: user.id
@@ -60,9 +60,12 @@ router.post("/",[
         {expiresIn:360000 },
         (err,token)=>{
             if(err) throw err;
-            res.json({ token })
+        res.json({ token})
+
 
          });
+ res.json(user._id)
+        
     } 
     catch(err){
         console.log(err.message);

@@ -11,8 +11,8 @@ const override = css`
 
 const Loading = () => {
   return (
-    <div  style={{marginTop:"20%",marginLeft:"45%"}}>
-      <BeatLoader css={override} color={'orangered'} size={40} />
+    <div className='load-animation' style={{marginTop:"20%",marginLeft:"45%"}}>
+      <BeatLoader css={override} color={'orangered'} size={20} />
     </div>
   );
 };

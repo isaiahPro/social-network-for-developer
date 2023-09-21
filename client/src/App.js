@@ -2,32 +2,47 @@ import {Fragment} from "react";
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Navbar,SignUp,Home,Developer,Login,Profile} from "./component/index"
+import { useSelector } from 'react-redux'
+import EditProfile from "./component/EditProfile";
 
-import {Provider} from 'react-redux';
-import store from "../src/Store_data/Store";
-import { Counter } from "./Counter";
+
 function App() {
+  const isDisplayed= useSelector((state) => state.display.value)
   return (
     <div className="app">
-    <Provider store={store} >
+   
     <Router>
         <Fragment>
         <Navbar/>
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/developer" element={<Developer/>} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/register" element={<SignUp/>} />
-        <Route path="/signup" element={<SignUp/>} />
-        <Route path="/profile/:id" element={<Profile/>} />
-        <Route path="/try" element={<Counter/>} />
+        {isDisplayed ? (
+           <Routes>
+           <Route path="/" element={<Home/>} />
+           <Route path="/developer" element={<Developer/>} />
+           <Route path="/login" element={<Login/>} />
+           <Route path="/register" element={<SignUp/>} />
+           <Route path="/signup" element={<SignUp/>} />
+           <Route path="/profile/:id" element={<Profile/>} />
+           <Route path="/editprofile" element={<EditProfile/>} />
 
-      </Routes>
+          
+         </Routes>
+       
+      ) : (
+       
+       <Routes>
+       <Route path="/" element={<Home/>} />
+       <Route path="/developer" element={<Login/>} />
+       <Route path="/login" element={<Login/>} />
+       <Route path="/register" element={<Login/>} />
+       <Route path="/signup" element={<SignUp/>} />
+       <Route path="/profile/:id" element={<Profile/>} />
+     </Routes>
+
+      )}
+     
         </Fragment>
      
     </Router>
-
-    </Provider>
      
     </div>
   );

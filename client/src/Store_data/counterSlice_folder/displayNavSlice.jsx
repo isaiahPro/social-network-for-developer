@@ -12,7 +12,6 @@ export const changedisplaySlice= createSlice({
   },
 })
 
-// Action creators are generated for each case reducer function
 export const { changedisplay } = changedisplaySlice.actions
 
-export default changedisplaySlice.reducer;
+export default changedisplaySlice.reducer; 

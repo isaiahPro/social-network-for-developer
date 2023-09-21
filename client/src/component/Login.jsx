@@ -6,9 +6,11 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import {useDispatch } from 'react-redux'
 import { changedisplay } from "../Store_data/counterSlice_folder/displayNavSlice";
+import { setUser, clearUser } from '../Store_data/counterSlice_folder/userDataSlice';
 
 
 const Login = () => {
+ 
 
   const dispatch=useDispatch();
 
@@ -24,8 +26,11 @@ const Login = () => {
 const navigate = useNavigate();
 
 
+
   const onSubmit = async e=>{
+    
     e.preventDefault();
+   
     const newUser={
       email,
       password
@@ -42,6 +47,14 @@ const navigate = useNavigate();
         const res = await axios.post("/api/auth",body,config);
         console.log(res.data);
 
+        axios.get(`/api/users/${res.data}`).then((res)=>{
+
+
+          console.log(res.data)
+
+          const user = { id: res.data._id, name:  res.data.name, avatar:res.data.avater};
+          dispatch(setUser(user));
+        })
         dispatch(changedisplay())
         navigate("/developer");
   
@@ -78,7 +91,7 @@ const navigate = useNavigate();
       <button type="submit" className='register-button'>Register</button>
       <br />
       <br />
-      <p>Don't have an account <Link to='/signup' style={{color:'blue'}}>sign up</Link></p>
+      <p>Don't have an account <Link to='/signup' style={{color:'blue'}} onClick={()=> dispatch(changedisplay())}>sign up</Link></p>
 
       </form>
      

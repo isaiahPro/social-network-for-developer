@@ -1,4 +1,4 @@
 {
-    "mongoURL":"mongodb+srv://user1:15395782@cluster0.egcvpm3.mongodb.net/?retryWrites=true&w=majority",
+    "mongoURL":"",
     "jwtSecret":"mysecretetoken"
 }

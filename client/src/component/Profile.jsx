@@ -9,6 +9,8 @@ import {BsYoutube} from "react-icons/bs";
 import axios from "axios"
 import { useParams } from 'react-router-dom';
 import Loading from './loading';
+import {AiTwotoneEdit} from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
 const Profile = () => {
   const { id } = useParams();
@@ -53,8 +55,7 @@ const Profile = () => {
         <Loading/>
       ) : (
 
-
-
+      <div>
         <div className="top-profile">
             <img className="indv-profile-pic"  src={user_data2.avater}/>
                  <p> <span className='indv-profile-tittle'>{user_data.user.name}</span>
@@ -70,12 +71,58 @@ const Profile = () => {
             </section>
 
         </div>
+        <div className="About_profile_data" >
+          <h3>About</h3>
+          <p>Lorem ipsum dolor sit amet consectetur
+             adipisicing elit. Cum nisi sapiente
+              voluptas. Adipisci, eligendi neque facilis,
+               exercitationem ratione placeat eius beatae culpa dolorum ipsum alias deleniti incidunt eum quibusdam totam.</p>
+         <div  >
+          <h3>Experiance</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur
+             adipisicing elit. Obcaecati 
+             maiores aspernatur veritatis cupiditate culpa aut non, voluptate ea quasi aliquam, distinctio reprehenderit recusandae iste. Nesciunt inventore eum vero ducimus harum!
+          </p>
+
+        </div>
+        <div >
+          <h3>Education</h3>
+          <p>
+            Lorem ipsum dolor sit amet 
+            
+            consectetur, adipisicing elit. Necessitatibus, autem nobis at magni minima aut dolorem. Impedit dolorum vel numquam cupiditate doloribus minima at qui rerum! Officiis itaque sunt cupiditate!
+          </p>
+
+        </div>
+        <div >
+          <h3>Posts</h3>
+          <p>
+            Lorem ipsum dolor sit amet 
+            consectetur, adipisicing elit. Necessitatibus, autem nobis at magni minima aut dolorem. Impedit dolorum vel numquam cupiditate doloribus minima at qui rerum! Officiis itaque sunt cupiditate!
+          </p>
+
+        </div>
+        </div>
+      
+        
+       
+        
+        
+
+      </div>
+
+
+
+        
+        
+        
 
 
       )}
 
         
-
+<div className='edit_profile_button'><Link to={"/editprofile"} style={{textDecoration:"none",color:"white"}}> Edit<AiTwotoneEdit/></Link></div>
 
 
     </div>
